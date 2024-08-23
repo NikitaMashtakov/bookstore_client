@@ -12,7 +12,7 @@ export const userApi = api.injectEndpoints({
         body: userData,
       }),
     }),
-    regiter: builder.mutation<
+    register: builder.mutation<
       { email: string; password: string; name: string },
       { email: string; password: string; name: string }
     >({
