@@ -2,7 +2,7 @@ import React from "react"
 import type { Book } from "../types"
 import { api } from "./api"
 
-export const booksApi = api.injectEndpoints({
+export const adminApi = api.injectEndpoints({
   endpoints: builder => ({
     createBook: builder.mutation<Book, { name: string; author: string }>({
       query: bookData => ({
@@ -19,3 +19,9 @@ export const booksApi = api.injectEndpoints({
     }),
   }),
 })
+
+const { useCreateBookMutation, useDeleteBookMutation } = adminApi
+
+export const {
+  endpoints: { createBook, deleteBook },
+} = adminApi
