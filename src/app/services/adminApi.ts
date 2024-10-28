@@ -1,4 +1,3 @@
-import React from "react"
 import type { Book } from "../types"
 import { api } from "./api"
 
